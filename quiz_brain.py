@@ -90,7 +90,10 @@ class QuizBrain:
             self.score += 1
             print('You Got it Right.')
         else:
-            print('You didn\'t get it right')
+            if self.repeat:
+                print('You skipped the question.')
+            else:
+                print('You didn\'t get it right')
         print(f'{correct_answer} was the right answer')
         print(
-            f'Your current score is : {self.score}/{self.question_number}\n\n')
+            f'YOUR CURRENT SCORE IS : {self.score}/{self.question_number}\n\n')
